@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Reflection - Our Lady - A Devotional Space</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .reflection-page {
+            padding-top: 100px;
+            min-height: 100vh;
+            background-color: var(--cream);
+        }
+        
+        .reflection-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 3rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+        
+        .back-button i {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="rose-icon">🌹</span>
+                    <span>Our Lady</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="index.html#prayers" class="nav-link" id="nav-prayers">Prayers</a></li>
+                <li><a href="index.html#reflections" class="nav-link" id="nav-reflections">Reflections</a></li>
+                <li><a href="index.html#consecration" class="nav-link" id="nav-consecration">Consecration</a></li>
+                <li><a href="index.html#gallery" class="nav-link" id="nav-gallery">Gallery</a></li>
+                <li><a href="index.html#about" class="nav-link" id="nav-about">About</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en" id="lang-en">EN</button>
+                <button class="lang-btn" data-lang="pt" id="lang-pt">PT</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reflection Content -->
+    <section class="reflection-page">
+        <div class="container">
+            <a href="index.html#reflections" class="back-button" id="back-link">
+                <i class="fas fa-arrow-left"></i> <span class="back-text">Back to Reflections</span>
+            </a>
+            
+            <div class="reflection-container">
+                <h2 class="reflection-title"></h2>
+                <div class="reflection-content">
+                    <!-- Reflection content will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-prayer">
+                    <p><em>"Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."</em></p>
+                </div>
+                <div class="footer-links">
+                    <p>&copy; 2025 Our Lady - A Devotional Space. Created with love and devotion.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/complete_language.js"></script>
+    <script src="scripts/reflection.js"></script>
+</body>
+</html>

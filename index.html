@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Our Lady - A Devotional Space</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="rose-icon">🌹</span>
+                <span>Our Lady</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#prayers" class="nav-link">Prayers</a></li>
+                <li><a href="#reflections" class="nav-link">Reflections</a></li>
+                <li><a href="#consecration" class="nav-link">Consecration</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en" id="lang-en">EN</button>
+                <button class="lang-btn" data-lang="pt" id="lang-pt">PT</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="images/capa.jpeg" alt="Our Lady" class="main-image">
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title">Totus Tuus, Maria</h1>
+                <p class="hero-subtitle">My Mother, take me entirely</p>
+                <p class="welcome-text">
+                    This space was born from love for the Mother of God. 
+                    Welcome to walk with Her in faith and devotion.
+                </p>
+                <div class="quick-access">
+                    <a href="#prayers" class="btn btn-primary">
+                        <i class="fas fa-pray"></i> Prayers
+                    </a>
+                    <a href="#reflections" class="btn btn-secondary">
+                        <i class="fas fa-book"></i> Reflections
+                    </a>
+                    <a href="#consecration" class="btn btn-primary">
+                        <i class="fas fa-heart"></i> Consecration
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayers Section -->
+    <section id="prayers" class="prayers-section">
+        <div class="container">
+            <h2 class="section-title">Marian Prayers</h2>
+            <div class="prayers-grid">
+                <div class="prayer-category">
+                    <h3><i class="fas fa-sun"></i> Daily Prayers</h3>
+                    <div class="prayer-list">
+                        <div class="prayer-item">
+                            <h4>The Angelus</h4>
+                            <p>The Angel of the Lord declared unto Mary...</p>
+                            <a href="prayer-template.html?prayer=The%20Angelus" class="btn-small">Read Prayer</a>
+                        </div>
+                        <div class="prayer-item">
+                            <h4>Holy Rosary</h4>
+                            <p>The most beloved prayer to Our Lady...</p>
+                            <a href="prayer-template.html?prayer=Holy%20Rosary" class="btn-small">Read Prayer</a>
+                        </div>
+                        <div class="prayer-item">
+                            <h4>Regina Caeli</h4>
+                            <p>Queen of Heaven, rejoice...</p>
+                            <a href="prayer-template.html?prayer=Regina%20Caeli" class="btn-small">Read Prayer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prayer-category">
+                    <h3><i class="fas fa-crown"></i> Consecrations</h3>
+                    <div class="prayer-list">
+                        <div class="prayer-item">
+                            <h4>St. Louis de Montfort</h4>
+                            <p>True Devotion to Mary...</p>
+                            <a href="prayer-template.html?prayer=St.%20Louis%20de%20Montfort" class="btn-small">Read Prayer</a>
+                        </div>
+                        <div class="prayer-item">
+                            <h4>Daily Simple Consecration</h4>
+                            <p>A daily offering to Our Lady...</p>
+                            <a href="prayer-template.html?prayer=Daily%20Simple%20Consecration" class="btn-small">Read Prayer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prayer-category">
+                    <h3><i class="fas fa-music"></i> Litanies</h3>
+                    <div class="prayer-list">
+                        <div class="prayer-item">
+                            <h4>Litany of Loreto</h4>
+                            <p>Lord, have mercy. Christ, have mercy...</p>
+                            <a href="prayer-template.html?prayer=Litany%20of%20Loreto" class="btn-small">Read Prayer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections" class="reflections-section">
+        <div class="container">
+            <h2 class="section-title">Reflections & Meditations</h2>
+            <div class="reflections-grid">
+                <article class="reflection-card">
+                    <h3>The Joyful Mysteries</h3>
+                    <p class="reflection-excerpt">Meditations on the Annunciation, Visitation, Nativity, Presentation, and Finding in the Temple...</p>
+                    <div class="reflection-tags">
+                        <span class="tag">#faith</span>
+                        <span class="tag">#joy</span>
+                        <span class="tag">#mystery</span>
+                    </div>
+                    <a href="reflection-template.html?reflection=The%20Joyful%20Mysteries" class="btn-read-more">Read More</a>
+                </article>
+
+                <article class="reflection-card">
+                    <h3>Mary's Fiat</h3>
+                    <p class="reflection-excerpt">On the perfect "Yes" of Our Lady and what it means for our spiritual journey...</p>
+                    <div class="reflection-tags">
+                        <span class="tag">#surrender</span>
+                        <span class="tag">#marianity</span>
+                    </div>
+                    <a href="reflection-template.html?reflection=Mary's%20Fiat" class="btn-read-more">Read More</a>
+                </article>
+
+                <article class="reflection-card">
+                    <h3>The Sorrowful Mysteries</h3>
+                    <p class="reflection-excerpt">Meditations on the Passion of Christ and Mary's compassion during His suffering...</p>
+                    <div class="reflection-tags">
+                        <span class="tag">#passion</span>
+                        <span class="tag">#compassion</span>
+                        <span class="tag">#suffering</span>
+                    </div>
+                    <a href="reflection-template.html?reflection=The%20Sorrowful%20Mysteries" class="btn-read-more">Read More</a>
+                </article>
+
+                <article class="reflection-card">
+                    <h3>Saints on Mary</h3>
+                    <p class="reflection-excerpt">Words from John Paul II, St. Louis de Montfort, St. Padre Pio and other Marian saints...</p>
+                    <div class="reflection-tags">
+                        <span class="tag">#saints</span>
+                        <span class="tag">#spirituality</span>
+                    </div>
+                    <a href="reflection-template.html?reflection=Saints%20on%20Mary" class="btn-read-more">Read More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luther Quote Section -->
+    <section class="luther-quote-section">
+        <div class="container">
+            <div class="quote-box">
+                <blockquote class="luther-quote">
+                    "She, the Lady who is above heaven and earth, must forget all her goods, have a heart so humble that she would not be ashamed to wash clothes, prepare a bath for John the Baptist, like any servant in Elizabeth's room. Such humility! It would have been more just to prepare a carriage drawn by 4,000 horses and pray and sing before her carriage: 'Behold the woman raised above all women; above the entire human race.'
+                    But no! Mary made the long journey on foot and she was already the mother of God! It would have been more reasonable for all the hills to jump and dance, preceding her."
+                </blockquote>
+                <cite class="quote-attribution">(Luther, cited in "Na Escola da Oração" p. 178)</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consecration Section -->
+    <section id="consecration" class="consecration-section">
+        <div class="container">
+            <h2 class="section-title">Marian Consecration</h2>
+            <div class="consecration-content">
+                <div class="consecration-explanation">
+                    <h3>What is Total Consecration to Mary?</h3>
+                    <p>
+                        Total consecration to Mary is a complete gift of oneself to Jesus through Mary. 
+                        It is a spiritual way of life based on the words of Jesus on the Cross: 
+                        "Behold your Mother" (John 19:27).
+                    </p>
+                    <p>
+                        Through this consecration, we entrust everything to Mary - our prayers, 
+                        works, joys, and sufferings - so that she may present them to Jesus 
+                        with her maternal love and intercession.
+                    </p>
+                </div>
+
+                <div class="preparation-steps">
+                    <h3>33-Day Preparation</h3>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Knowledge of Self (12 days)</h4>
+                            <p>Understand your human nature and need for grace</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Knowledge of Mary (7 days)</h4>
+                            <p>Learn about Our Lady's virtues and privileges</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Knowledge of Jesus (7 days)</h4>
+                            <p>Deepen your relationship with Christ</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Living the Consecration (7 days)</h4>
+                            <p>Prepare for the act of consecration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Devotional Gallery</h2>
+            
+            <div class="gallery-intro">
+                <p>
+                    Sabemos tanto sobre Jesus após os 30 anos… e tão pouco sobre sua infância. Sempre me emocionei ao imaginar Maria, mãe amorosa, cuidando de Jesus nos primeiros anos de vida. E você, já parou para pensar nisso?
+                </p>
+                <p>
+                    Com a ajuda da Inteligência Artificial, consegui dar forma a algumas dessas imagens que há tanto tempo habitavam minha imaginação. Maria trocando as fraldas de Jesus, ajudando-o nos primeiros passos, oferecendo comida e água, cuidando de seus machucados, protegendo-o com ternura e amando-o de forma tão profunda que chega a ser difícil de descrever — e até mesmo de imaginar.
+                </p>
+                <p>
+                    Salve a Santa Mãe de Deus!
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/mary_jesus0.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus1.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus2.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus3.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus4.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus5.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus6.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus7.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus8.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus9.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus10.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus11.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus12.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus13.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus14.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus15.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus16.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus19.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus20.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mary_jesus21.jpg" alt="Mary and Jesus" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books & Inspirations Section -->
+    <section class="books-section">
+        <div class="container">
+            <h2 class="section-title">Books, Hymns & Inspirations</h2>
+            <div class="books-grid">
+                <div class="book-category">
+                    <h3>Recommended Reading</h3>
+                    <ul class="book-list">
+                        <li>"True Devotion to Mary" - St. Louis de Montfort</li>
+                        <li>"The Glories of Mary" - St. Alphonsus Liguori</li>
+                        <li>"The Secret of Mary" - St. Louis de Montfort</li>
+                        <li>"Mother of the Redeemer" - Pope John Paul II</li>
+                    </ul>
+                </div>
+                <div class="book-category">
+                    <h3>Marian Hymns</h3>
+                    <ul class="book-list">
+                        <li>"Ave Maria" - Traditional</li>
+                        <li>"Immaculate Mary" - Lourdes Hymn</li>
+                        <li>"Hail Holy Queen" - Salve Regina</li>
+                        <li>"Mary, Did You Know?" - Modern</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About This Space</h2>
+            <div class="about-content">
+                <p>
+                    This website was created as a labor of love and devotion to Our Blessed Mother Mary. 
+                    It serves as a peaceful sanctuary for those seeking to deepen their relationship 
+                    with Mary and, through her, with Jesus Christ.
+                </p>
+                <p>
+                    I am not a theologian. I am simply a child of the Mother, called to share the 
+                    beauty and peace that comes from Marian devotion. This space is meant to be 
+                    a place of welcome, comfort, and spiritual growth.
+                </p>
+                <p class="purpose">
+                    <strong>Purpose:</strong> To create a space of love, welcome, and Marian spirituality 
+                    where hearts can find rest and souls can draw closer to Heaven through Mary's 
+                    maternal intercession.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-prayer">
+                    <p><em>"Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."</em></p>
+                </div>
+                <div class="footer-links">
+                    <p>&copy; 2025 Our Lady - A Devotional Space. Created with love and devotion.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Complete Language System -->
+    <script src="scripts/complete_language.js"></script>
+</body>
+</html>

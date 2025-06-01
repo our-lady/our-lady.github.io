@@ -1,0 +1,1279 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Marian Colors */
+    --primary-blue: #2c5aa0;
+    --light-blue: #4a7bc8;
+    --soft-blue: #e8f2ff;
+    --white: #ffffff;
+    --cream: #faf9f7;
+    --gold: #d4af37;
+    --light-gold: #f5e6a8;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+    --border-light: #e9ecef;
+    
+    /* Typography */
+    --font-serif: 'Crimson Text', serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --section-padding: 80px 0;
+    --container-max-width: 1200px;
+    
+    /* Shadows */
+    --shadow-light: 0 2px 10px rgba(44, 90, 160, 0.1);
+    --shadow-medium: 0 4px 20px rgba(44, 90, 160, 0.15);
+    --shadow-strong: 0 8px 30px rgba(44, 90, 160, 0.2);
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--cream);
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-light);
+}
+
+.nav-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.nav-logo i {
+    color: var(--gold);
+}
+
+.nav-logo .rose-icon {
+    color: var(--gold);
+    font-size: 1.2em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Language Selector */
+.language-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: var(--shadow-light);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-blue);
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--soft-blue) 0%, var(--cream) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-strong);
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.quick-access {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--light-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background: var(--light-gold);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.btn-read-more {
+    padding: 10px 20px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-read-more:hover {
+    background: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gold);
+}
+
+/* Prayers Section */
+.prayers-section {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.prayers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.prayer-category {
+    background: var(--soft-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+}
+
+.prayer-category h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prayer-category h3 i {
+    color: var(--gold);
+}
+
+.prayer-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-light);
+}
+
+.prayer-item h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.prayer-item p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Reflections Section */
+.reflections-section {
+    padding: var(--section-padding);
+    background: var(--cream);
+}
+
+.reflections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.reflection-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reflection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.reflection-card h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.reflection-excerpt {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.reflection-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--light-gold);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Luther Quote Section */
+.luther-quote-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, var(--soft-blue) 0%, #f8fbff 100%);
+}
+
+.quote-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+    border-left: 6px solid var(--gold);
+    position: relative;
+}
+
+.luther-quote {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-style: italic;
+    margin: 0;
+    position: relative;
+    text-align: justify;
+}
+
+.luther-quote::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--gold);
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    font-family: var(--font-serif);
+    line-height: 1;
+}
+
+.luther-quote::after {
+    content: '"';
+    font-size: 5rem;
+    color: var(--gold);
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+    font-family: var(--font-serif);
+    line-height: 1;
+}
+
+.quote-attribution {
+    display: block;
+    text-align: right;
+    margin-top: 2rem;
+    font-style: normal;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Consecration Section */
+.consecration-section {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.consecration-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.consecration-explanation {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.consecration-explanation h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.consecration-explanation p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.preparation-steps {
+    margin-bottom: 3rem;
+}
+
+.preparation-steps h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step {
+    background: var(--soft-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    background: var(--primary-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 1rem;
+}
+
+.step h4 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+}
+
+.step p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: var(--section-padding);
+    background: var(--cream);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+.gallery-intro {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-family: var(--serif-font);
+    line-height: 1.8;
+}
+
+.gallery-intro p {
+    margin-bottom: 1.2rem;
+    color: var(--text-dark);
+}
+
+.gallery-intro p:last-child {
+    font-style: italic;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 2rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay p {
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-serif);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.gallery-controls .btn-small {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Books Section */
+.books-section {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+.book-category {
+    background: var(--soft-blue);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.book-category h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.book-list {
+    list-style: none;
+}
+
+.book-list li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-light);
+    transition: background 0.3s ease;
+}
+
+.book-list li:hover {
+    background: var(--light-gold);
+}
+
+/* About Section */
+.about-section {
+    padding: var(--section-padding);
+    background: var(--cream);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.purpose {
+    background: var(--soft-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--gold);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-blue);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-prayer {
+    margin-bottom: 1rem;
+}
+
+.footer-prayer em {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+}
+
+.footer-links p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* Enhanced Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 90, 160, 0.3);
+    backdrop-filter: blur(5px);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 3% auto;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-strong);
+    animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close {
+    color: var(--text-light);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary-blue);
+    background: var(--soft-blue);
+    transform: scale(1.1);
+}
+
+#prayerContent,
+#reflectionContent {
+    padding: 0 40px 40px 40px;
+}
+
+#prayerContent h2,
+#reflectionContent h2 {
+    font-family: var(--font-serif);
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 15px;
+    font-size: 2rem;
+}
+
+.prayer-text,
+.reflection-text {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.prayer-text p,
+.reflection-text p {
+    margin-bottom: 15px;
+}
+
+.prayer-text h4,
+.prayer-text h5,
+.reflection-text h4,
+.reflection-text h5 {
+    color: var(--primary-blue);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: var(--font-serif);
+}
+
+.prayer-text h4 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--light-gold);
+    padding-bottom: 8px;
+}
+
+.prayer-text h5 {
+    font-size: 1.2rem;
+    color: var(--light-blue);
+}
+
+.prayer-indent {
+    margin-left: 30px;
+    font-style: italic;
+    color: var(--text-light);
+    background: var(--soft-blue);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+
+.prayer-final {
+    background: linear-gradient(135deg, var(--soft-blue) 0%, var(--light-gold) 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-blue);
+    margin: 25px 0;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+}
+
+.prayer-center {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 25px 0;
+    font-size: 1.2rem;
+}
+
+.prayer-note {
+    background: linear-gradient(135deg, #fff8e1 0%, #f5e6a8 100%);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    font-style: italic;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-light);
+}
+
+.prayer-intro {
+    font-style: italic;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--cream);
+    border-radius: 10px;
+    border: 2px dashed var(--light-blue);
+}
+
+.reflection-prayer {
+    background: linear-gradient(135deg, var(--soft-blue) 0%, #e6f3ff 100%);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-blue);
+    box-shadow: var(--shadow-light);
+}
+
+.reflection-prayer h5 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.reflection-prayer p {
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+blockquote {
+    border-left: 5px solid var(--gold);
+    margin: 25px 0;
+    padding: 20px 25px;
+    background: linear-gradient(135deg, #fafafa 0%, var(--cream) 100%);
+    font-style: italic;
+    color: var(--text-dark);
+    border-radius: 0 10px 10px 0;
+    box-shadow: var(--shadow-light);
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--gold);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: var(--font-serif);
+    opacity: 0.6;
+}
+
+.reflection-text ol {
+    padding-left: 25px;
+    margin: 20px 0;
+}
+
+.reflection-text li {
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Enhanced fade-in animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive design for modals */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        position: relative;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 88px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-medium);
+        padding: 2rem 0;
+        gap: 1.5rem;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .language-selector {
+        margin-right: 3rem;
+    }
+
+    .lang-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    /* Modal styles */
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        max-height: 85vh;
+    }
+    
+    #prayerContent,
+    #reflectionContent {
+        padding: 0 25px 30px 25px;
+    }
+    
+    #prayerContent h2,
+    #reflectionContent h2 {
+        font-size: 1.7rem;
+        padding: 15px 0;
+    }
+    
+    .close {
+        padding: 15px;
+        font-size: 24px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .prayer-text,
+    .reflection-text {
+        font-size: 1rem;
+    }
+    
+    .prayer-indent {
+        margin-left: 20px;
+        padding: 8px 12px;
+    }
+    
+    .prayer-final,
+    .reflection-prayer {
+        padding: 20px;
+    }
+    
+    blockquote {
+        padding: 15px 20px;
+        margin: 20px 0;
+    }
+    
+    blockquote::before {
+        font-size: 3rem;
+        top: -5px;
+        left: 5px;
+    }
+    
+    /* Luther Quote responsive */
+    .quote-box {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .luther-quote {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .luther-quote::before,
+    .luther-quote::after {
+        font-size: 4rem;
+    }
+    
+    .luther-quote::before {
+        left: -15px;
+        top: -5px;
+    }
+    
+    .luther-quote::after {
+        bottom: -35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 98%;
+        margin: 2% auto;
+        border-radius: 10px;
+        max-height: 95vh;
+    }
+    
+    #prayerContent,
+    #reflectionContent {
+        padding: 0 20px 25px 20px;
+    }
+    
+    #prayerContent h2,
+    #reflectionContent h2 {
+        font-size: 1.5rem;
+    }
+    
+    .prayer-final,
+    .reflection-prayer {
+        padding: 15px;
+    }
+    
+    .prayer-text h4 {
+        font-size: 1.2rem;
+    }
+    
+    .prayer-text h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Luther Quote mobile */
+    .quote-box {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+        border-left: 4px solid var(--gold);
+    }
+    
+    .luther-quote {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .luther-quote::before,
+    .luther-quote::after {
+        font-size: 3rem;
+    }
+    
+    .luther-quote::before {
+        left: -10px;
+        top: -5px;
+    }
+    
+    .luther-quote::after {
+        bottom: -25px;
+        right: -5px;
+    }
+    
+    .quote-attribution {
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Smooth scrolling inside modals */
+.modal-content {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for modals */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--cream);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+/* Language Transition Animation */
+.lang-transition {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Error Message Styling */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #f8d7da;
+    background-color: #fff8f8;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.error-message h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-family: var(--serif-font);
+}
+
+.error-message p {
+    font-family: var(--sans-font);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.error-message a {
+    color: var(--primary-blue);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.error-message a:hover {
+    color: var(--light-blue);
+}
+
+/* Navigation Styles */
+
+/* Logo Link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover {
+    color: var(--primary-blue);
+}
